@@ -1,0 +1,292 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background: #162938;
+    color: #fff;
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: #162938;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.nombre {
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+.navegacion a {
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 27px;
+    transition: .3s;
+}
+.navegacion a:hover,
+.navegacion a.active {
+    color: #00abf0;
+}
+
+.solcial-icons {
+    position: fixed;
+    left: 0px;
+    top: 45%;
+}
+.solcial-icons a {
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    background-color: transparent;
+}
+.solcial-icons img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.solcial-icons a:hover {
+    transform: scale(1.2);
+}
+
+.inicio {
+    height: 100vh;
+    background: url('astronaut-chibi.png') no-repeat ;
+    background-size: 30%;
+    background-position: 950px 190px;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+.inicio-contenido {
+    max-width: 600px;
+}
+.inicio-contenido h1 {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.inicio-contenido h3 {
+    font-size: 32;
+    font-weight: 700;
+    color: #00abf0;
+}
+.inicio-contenido p {
+    font-size: 16px;
+    margin: 20px 0 40px;
+}
+
+.yo {
+    height: 100vh;
+    background: url('foto-mia.png' ) no-repeat ;
+    background-size: 20%;
+    background-position: 950px 190px;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+.yo-contenido {
+    max-width: 600px;
+}
+.yo-contenido h2 {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.yo-contenido h3 {
+    font-size: 32;
+    font-weight: 700;
+    color: #00abf0;
+}
+.yo-contenido p {
+    font-size: 16px;
+    margin: 20px 0 40px;
+}
+
+
+.educacion {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+.edu-contenido {
+    max-width: 600px;
+}
+.edu-contenido h2 {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.yo-contenido p {
+    font-size: 16px;
+    margin: 20px 0 40px;
+}
+
+.tablas {
+    border: solid 1px #dbdddf;
+}
+table {
+    color: #fff;
+    font-size: 14px;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+thead {
+    background: #00abf0;
+}
+th {
+    padding: 20px 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+td {
+    padding: 15px;
+    border-bottom: solid 1px #dbdddf;
+}
+tbody tr {
+    cursor: pointer;
+}
+tbody tr:hover {
+    background: #fc2bd9;
+}
+.eyh {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+section img {
+    width: 0px;
+    border-bottom: solid 2px #ee0b88;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
+}
+section img:hover {
+    cursor: crosshair;
+    width: 600px;
+    opacity: 1;
+    filter: contrast(120%);
+}
+.definitivo {
+    min-height: 100vh;
+    background: url('bosque_wallpaper.jpg') no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10%;
+}
+.sofi {
+    position: relative;
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*overflow: hidden;*/
+    transition: height .2s ease;
+}
+.sofi.active {
+    height: 520px;
+}
+
+.sofi .from-box {
+    width: 100%;
+    padding: 14%;
+}
+.from-box h2 {
+    font-size: 2em;
+    color: #fff;
+    text-align: center;
+}
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #162938;
+    margin: 30px 0;
+}
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #162938;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+.input-box input:focus~label,
+.input-box input:valid~label {
+    top: -5px;
+}
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #162938;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+.input-box .icon {
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: #162938;
+    line-height: 57px;
+}
+textarea {
+    height: 42px; width: 245px; outline: none;
+    resize: none; padding: 12px;
+    border: 1px solid #fff;
+    scrollbar-width: none; 
+}
+label #imensaje {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #162938;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+.btn {
+    width: 100%;
+    height: 45px;
+    background: #162938;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+}
